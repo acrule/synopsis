@@ -1,5 +1,5 @@
-# What is Biopsy?
-Biopsy is an application for doing amazing things summarizing note text.
+# What is Synopsis?
+Synopsis is an application for quickly summarizing a patient's record.
 
 # Acknowledgements
-Note Text was partially copied from https://www.med.unc.edu/medselect/resources/sample-notes.
+Note text was partially copied from https://www.med.unc.edu/medselect/resources/sample-notes.
