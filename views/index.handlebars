@@ -1,9 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="javascripts/list.js"></script>
+<script src="javascripts/timeline.js"></script>
 
-<p>Some of the features of this project are:</p>
-<ul>
-{{#each features}}
-    <li>{{text}}</li>
-{{/each}}
+<svg id="timeline" width="1200" height="200"></svg>
+<div id="list">
+    <ul>
+    {{#each notes}}
+    <!-- still need to figure out how to update the color at load time-->
+        <li class="note" id="note{{id}}" style="background-color:rgba(255,145,0,"+{{reads}}/7+");"><span class="left truncated">{{title}}</span> <span class = "right">{{date}}</span></li>
+    {{/each}}
+</div>
+<div id="reader">
+    <div id="text"></div>
+    <div id="minimap">Minimap of the text goes here.</div>
+</div>
 </ul>
