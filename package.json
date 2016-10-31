@@ -1,5 +1,5 @@
 {
-  "name": "biopsy",
+  "name": "synopsis",
   "version": "0.1.0",
   "description": "An application for reviewing a patient's medical history.",
   "private": true,
