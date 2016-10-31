@@ -14,6 +14,8 @@ app.use(express.static('public'));
 
 app.get('/note/:id', note.noteInfo);
 
-app.listen(3000, function () {
-  console.log('Biopsy listening on port 3000.');
-});
+// app.listen(3000, function () {
+//   console.log('Biopsy listening on port 3000.');
+// });
+
+module.exports = app;
