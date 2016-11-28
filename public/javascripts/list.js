@@ -9,10 +9,31 @@ function initializePage() {
     // select first item on page and display its text
     $('#list li').first().addClass('selected');
     $.get('/note/1', setText);
+
+    // hook up onscroll event
+    $("#text").on("scroll", scrollMinimap);
+}
+
+function scrollMinimap(){
+    $("#viewfinder").css('top', $("#text").scrollTop()*3.9/14 + "px");
 }
 
 function setText(result){
     $('#text').html(result.message);
+
+    // set minimap
+    $("#minimap-text").empty();
+    var lines = result.message.split("<br>");
+    $.each(lines, function(i,l){
+        var words = l.split(" ");
+        $.each(words, function(i, w) {
+            $("#minimap-text").append($("<span>").text(w).addClass("block"));
+            $("#minimap-text").append($("<span>").text(" "));
+        });
+        $("#minimap-text").append($("<br>"));
+    });
+
+    // set color according to number of times note is read
     $(('#note'+result.id)).css('background-color', "rgba(255,175,100,"+result.reads/7+")")
 }
 

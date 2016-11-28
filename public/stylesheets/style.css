@@ -47,6 +47,8 @@ h1{
     width: 900px;
     height: 600px;
     float: left;
+    /*font-size: 13px;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;*/
 }
 
 #text{
@@ -65,15 +67,32 @@ h1{
 #minimap{
     width: 150px;
     height:500px;
-    float:left;
 
-    padding: 10px;
-
-    border: 1px solid #CCC;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 
+    float:left;
+    overflow:hidden;
+    position: relative;
+
+    border: 1px solid #CCC;
+
+    font-size: 2.96px;
+    line-height: 200%;
+}
+
+#minimap-text{
+    padding: 3px;
+    position: absolute;
+}
+
+#viewfinder{
+    z-index: 65535;
+    width: 150px;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
 }
 
 #timeline{
@@ -84,6 +103,13 @@ h1{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+
+
+
+span.block{
+    background: #999;
+    color: #999;
 }
 
 .right{
@@ -104,7 +130,7 @@ h1{
 
  .selected{
      background-color: #666;
-     color: white;
+     color: #333;
  }
 
  .area {

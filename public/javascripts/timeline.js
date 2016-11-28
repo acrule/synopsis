@@ -1,5 +1,13 @@
 $(document).ready(function() {
 	initializeTimeline();
+
+    // removing minimap for now
+    /*var previewBody = $('#reader').minimap({
+        heightRatio: 0.2,
+        widthRatio: 0.3,
+        offsetHeightRatio: 0,
+        offsetWidthRatio: 0
+    });*/
 })
 
 function initializeTimeline(){
